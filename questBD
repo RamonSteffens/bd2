@@ -1,0 +1,49 @@
+
+DELIMITER $$
+CREATE TRIGGER verifica_uf BEFORE INSERT	
+ON cliente FOR EACH ROW
+BEGIN
+IF NEW.uf NOT LIKE "RS" AND
+NEW.uf NOT LIKE "SC" AND
+NEW.uf NOT LIKE "PR" AND
+NEW.uf NOT LIKE "SP" AND
+NEW.uf NOT LIKE "RJ" AND
+NEW.uf NOT LIKE "MG" AND
+NEW.uf NOT LIKE "MS" AND
+NEW.uf NOT LIKE "PR" AND
+NEW.uf NOT LIKE "BA" AND
+THEN SET NEW.nome= null; /*VAI DAR ERRO POIS E NOT NULL*/
+END IF;
+END$
+DELIMITER ;
+
+/*1) Faça um gatilho que só permita cadastrar clientes onde a UF seja válida.
+2) Faça um gatilho que não permita atualizar a UF do cliente, caso a UF não seja válida.*/
+
+DELIMITER $$
+CREATE TRIGGER validaUf BEFORE UPDATE 
+ON cliente FOR EACH ROW
+BEGIN
+IF NEW.uf NOT LIKE "RS" AND
+NEW.uf NOT LIKE "SC" AND
+NEW.uf NOT LIKE "PR" AND
+NEW.uf NOT LIKE "SP" AND
+NEW.uf NOT LIKE "RJ" AND
+NEW.uf NOT LIKE "MG" AND
+NEW.uf NOT LIKE "MS" AND
+NEW.uf NOT LIKE "PR" AND
+NEW.uf NOT LIKE "BA" AND
+THEN SET NEW.nome=null;
+END IF;
+END$
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE EVENT attDolar
+EVERY 1 WEEK
+STARTS NOW() + INTERVAL DAYOFWEEK(NOW())
+
+DELIMITER ;
+
+
