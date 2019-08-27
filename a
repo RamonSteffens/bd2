@@ -1,0 +1,50 @@
+[33mcommit 6e863624f815aaaa2791f56b50398cbf268ae59a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: RamonSteffens <ramonsteffenssilva@gmail.com>
+Date:   Tue Aug 27 16:07:18 2019 -0300
+
+    Atualizado com sucesso, corrigi o erro dando add no arquivo que aparecia em vermelho
+
+[33mcommit 6e6ed9d8ea16901105cff302c11065118b7f8798[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: RamonSteffens <ramonsteffenssilva@gmail.com>
+Date:   Tue Aug 27 16:01:14 2019 -0300
+
+    TESTE DE CODIGO
+
+[33mcommit 5425b039f804c2ee8b14d5f067dad4440ad0470e[m
+Merge: 802a832 466ffb2
+Author: JoaoCruzFagundes <joao.cruzfagundes@gmail.com>
+Date:   Tue Aug 27 10:39:08 2019 -0300
+
+    Merge branch 'master' of https://github.com/RamonSteffens/bd2
+    
+    pq sim
+
+[33mcommit 802a83296ca50c08155b96d71413c2275a472327[m
+Author: JoaoCruzFagundes <joao.cruzfagundes@gmail.com>
+Date:   Tue Aug 27 09:46:46 2019 -0300
+
+    Questoes de BD
+
+[33mcommit 466ffb2f2cde3c81ecb5903dff0f471097f1dbf7[m
+Author: RamonSteffens <54582257+RamonSteffens@users.noreply.github.com>
+Date:   Tue Aug 27 08:54:08 2019 -0300
+
+    Update HOW TO USE
+
+[33mcommit d4a5209ce27304d18264985c70ef3f41b4c348ad[m
+Author: RamonSteffens <54582257+RamonSteffens@users.noreply.github.com>
+Date:   Tue Aug 27 08:49:49 2019 -0300
+
+    Create HOW TO USE
+
+[33mcommit f0b27ae6b53a49b6d70bcf2706888b46286d9a89[m
+Author: JoaoCruzFagundes <joao.cruzfagundes@gmail.com>
+Date:   Tue Aug 27 08:49:04 2019 -0300
+
+    novo arquivo de teste
+
+[33mcommit 28d56ef09c00cca5a86fa9b8d25032de7ec016e7[m
+Author: RamonSteffens <54582257+RamonSteffens@users.noreply.github.com>
+Date:   Tue Aug 27 08:43:27 2019 -0300
+
+    Initial commit
