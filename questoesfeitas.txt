@@ -1,0 +1,58 @@
+/*1) Faça um gatilho que só permita cadastrar clientes onde a UF seja válida.*/
+use compubras;
+DELIMITER $$
+CREATE TRIGGER trig BEFORE INSERT ON  cliente
+FOR EACH ROW 
+BEGIN 
+IF NEW.UF NOT LIKE "RS" AND
+new.uf not like "SC" AND
+new.uf not like "PR" AND
+new.uf not like "SP" AND
+new.uf not like "MS" AND
+new.uf not like "RJ" AND
+new.uf not like "MG" AND
+new.uf not like "MT" AND
+new.uf not like "ES" AND
+new.uf not like "TO" AND
+new.uf not like "DF" AND
+new.uf not like "RO" AND
+new.uf not like "AC" AND
+new.uf not like "AM" AND
+new.uf not like "RR" AND
+new.uf not like "AP" AND
+new.uf not like "PA" AND
+new.uf not like "PI" AND
+new.uf not like "RN" AND
+new.uf not like "PE" AND
+new.uf not like "AL" AND
+new.uf not like "PB" AND
+new.uf not like "SE" AND
+new.uf not like "BA" AND
+new.uf not like "GO" AND
+new.uf not like "CE" AND
+new.uf not like "MA"
+THEN SET NEW.NOME = NULL;
+END IF;
+end$$
+delimiter ;
+
+INSERT INTO cliente (Nome, Endereco, Cidade, Cep,UF, ie) VALUES
+("Ana","Copacabana", "Sapucaia do Sul", "93220300","RS", "123456789-0");
+
+/*2) Faça um gatilho que não permita atualizar a UF do cliente, caso a UF não seja válida.*/
+DELIMITER $$
+CREATE TRIGGER trigr2 BEFORE UPDATE ON cliente
+FOR EACH ROW
+BEGIN
+IF NEW.uf NOT LIKE "RS" AND
+NEW.uf NOT LIKE "PR" AND
+NEW.uf NOT LIKE "SC" AND
+NEW.uf NOT LIKE "MG" AND
+NEW.uf NOT LIKE "BH" AND
+NEW.uf NOT LIKE "SE" AND
+NEW.uf NOT LIKE "PB" AND
+NEW.uf NOT LIKE "RN" 
+THEN SET NEW.nome = NULL;
+END IF;
+END$$
+DELIMITER ;
